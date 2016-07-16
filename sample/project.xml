@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Sample" package="com.sample.sample" version="1.0.0" company="Company Name" />
+	<app main="Main" path="Export" file="Sample" />
+	
+	<source path="Source" />
+	
+	<haxelib name="openfl" />
+	
+	<assets path="Assets" rename="assets" />
+
+	<include path="../../jive-nativetools" />
+	<android target-sdk-version="21" />
+	
+</project>
