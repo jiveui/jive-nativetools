@@ -13,8 +13,10 @@ class Main extends Sprite {
 		super ();
 		
 		NativeTools.setStatusBarColor(0xFFFFFFFF);
+
+		trace("DPI = " + NativeTools.getDPI());
+		trace("Density = " + NativeTools.getDensity());
 		
 	}
-	
-	
+
 }

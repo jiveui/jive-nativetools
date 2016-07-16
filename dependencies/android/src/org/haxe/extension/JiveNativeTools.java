@@ -65,6 +65,16 @@ public class JiveNativeTools extends Extension {
 	}
 
 
+	public static int getDensityDPI() {
+		return Extension.mainActivity.getResources().getDisplayMetrics().densityDpi;
+	}
+
+
+	public static float getDensity() {
+		return Extension.mainActivity.getResources().getDisplayMetrics().density;
+	}
+
+
 	public static int sampleMethod (int inputValue) {
 		
 		return inputValue * 100;
