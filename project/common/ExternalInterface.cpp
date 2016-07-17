@@ -8,30 +8,37 @@
 
 
 #include <hx/CFFI.h>
-#include "Utils.h"
+#include "NativeTools.h"
 
 
-using namespace jive_nativetools;
+using namespace nativetools;
 
 
 
-static value jive_nativetools_sample_method (value inputValue) {
+static value nativetools_get_dpi() {
 	
-	int returnValue = SampleMethod(val_int(inputValue));
-	return alloc_int(returnValue);
+	return alloc_int(GetDPI());
 	
 }
-DEFINE_PRIM (jive_nativetools_sample_method, 1);
+DEFINE_PRIM (nativetools_get_dpi, 0);
+
+
+static value nativetools_get_density() {
+	
+	return alloc_float(GetDensity());
+	
+}
+DEFINE_PRIM (nativetools_get_density, 0);
 
 
 
-extern "C" void jive_nativetools_main () {
+extern "C" void nativetools_main () {
 	
 	val_int(0); // Fix Neko init
 	
 }
-DEFINE_ENTRY_POINT (jive_nativetools_main);
+DEFINE_ENTRY_POINT (nativetools_main);
 
 
 
-extern "C" int jive_nativetools_register_prims () { return 0; }
+extern "C" int nativetools_register_prims () { return 0; }
