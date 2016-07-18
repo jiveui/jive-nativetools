@@ -37,7 +37,7 @@ class NativeTools {
 		
 		#else if (ios)
 		
-			return 160; // TODO
+			return get_dpi();
 
 		#else
 
@@ -56,7 +56,7 @@ class NativeTools {
 		
 		#else if (ios)
 		
-			return 1.0; // TODO
+			return get_density();
 
 		#else
 
@@ -67,12 +67,14 @@ class NativeTools {
 	}
 	
 	
-	// private static var jive_nativetools_sample_method = Lib.load ("jive_nativetools", "jive_nativetools_sample_method", 1);
 	
 	#if (android && openfl)
 		private static var set_status_bar_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "setStatusBarColor", "(I)V");
 		private static var get_dpi_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "getDensityDPI", "()I");
 		private static var get_density_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "getDensity", "()F");
+	#else
+		private static var get_dpi = Lib.load ("nativetools", "get_dpi", 0);
+		private static var get_density = Lib.load ("nativetools", "get_density", 0);
 	#end
 	
 	
