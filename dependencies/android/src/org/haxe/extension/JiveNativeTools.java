@@ -43,7 +43,6 @@ import android.view.WindowManager;
 public class JiveNativeTools extends Extension {
 	
 	public static void setStatusBarColor(final int color) {
-		Log.v("trace", "setStatusBarColor 1");
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 			Extension.mainActivity.runOnUiThread(new Runnable() {
 				@Override
@@ -62,6 +61,16 @@ public class JiveNativeTools extends Extension {
 		} else {
 			Log.v("trace", "Your SDR version less then 21 (LOLLIPOP).");
 		}
+	}
+
+	public static void showStatusBar() {
+		Extension.mainActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				Window window = Extension.mainActivity.getWindow();
+				window.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+			}
+		});
 	}
 
 

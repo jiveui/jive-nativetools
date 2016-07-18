@@ -29,6 +29,21 @@ class NativeTools {
 	}
 
 
+	public static function showStatusBar() {
+		
+		#if (android && openfl)
+		
+			show_status_bar_jni();
+		
+		#else
+		
+			trace("Your OS does not support this operation.");
+		
+		#end
+		
+	}
+
+
 	public static function getDPI() : Int {
 		
 		#if (android && openfl)
@@ -70,6 +85,7 @@ class NativeTools {
 	
 	#if (android && openfl)
 		private static var set_status_bar_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "setStatusBarColor", "(I)V");
+		private static var show_status_bar_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "showStatusBar", "()V");
 		private static var get_dpi_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "getDensityDPI", "()I");
 		private static var get_density_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "getDensity", "()F");
 	#else
