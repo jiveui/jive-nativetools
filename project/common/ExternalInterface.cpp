@@ -41,4 +41,4 @@ DEFINE_ENTRY_POINT (nativetools_main);
 
 
 
-extern "C" int nativetools_register_prims () { return 0; }
+extern "C" int jive_nativetools_register_prims () { return 0; }

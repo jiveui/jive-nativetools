@@ -1,4 +1,5 @@
 #include <NativeTools.h>
+#import <UIKit/UIScreen.h>
 
 namespace nativetools
 {
@@ -12,6 +13,6 @@ namespace nativetools
 			scale = [[UIScreen mainScreen] scale];
 		}
 
-		return 1.555 /*scale*/;
+		return scale;
 	}
 }

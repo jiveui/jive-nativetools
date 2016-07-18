@@ -50,9 +50,10 @@ class NativeTools {
 		
 			return get_dpi_jni();
 		
-		#else if (ios)
+		#elseif (ios)
 		
-			return get_dpi();
+			trace("Operation does not implemented for ios.")
+			return 160;
 
 		#else
 
@@ -69,7 +70,7 @@ class NativeTools {
 		
 			return get_density_jni();
 		
-		#else if (ios)
+		#elseif (ios)
 		
 			return get_density();
 
@@ -89,7 +90,7 @@ class NativeTools {
 		private static var get_dpi_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "getDensityDPI", "()I");
 		private static var get_density_jni = JNI.createStaticMethod("org.haxe.extension.JiveNativeTools", "getDensity", "()F");
 	#else
-		private static var get_dpi = Lib.load ("nativetools", "get_dpi", 0);
+		// private static var get_dpi = Lib.load ("nativetools", "get_dpi", 0);
 		private static var get_density = Lib.load ("nativetools", "get_density", 0);
 	#end
 	
