@@ -1,4 +1,4 @@
-package nativetools;
+package jive.nativetools;
 
 #if cpp
 import cpp.Lib;
@@ -52,7 +52,7 @@ class NativeTools {
 		
 		#elseif (ios)
 		
-			trace("Operation does not implemented for ios.")
+			trace("Operation does not implemented for ios. Return default value = 160");
 			return 160;
 
 		#else

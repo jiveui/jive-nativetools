@@ -3,14 +3,17 @@
 	
 	<meta title="Sample" package="com.sample.sample" version="1.0.0" company="Company Name" />
 	<app main="Main" path="Export" file="Sample" />
+	<window background="#90C3D4" />
 	
 	<source path="Source" />
 	
 	<haxelib name="openfl" />
+
+	<haxelib name="swf" />
 	
 	<assets path="Assets" rename="assets" />
 
-	<include path="../../jive-nativetools" />
+	<include path="../../jive-nativetools" if="mobile" />
 	<android target-sdk-version="21" />
-	
+
 </project>
