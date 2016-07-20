@@ -5,15 +5,14 @@
 	<app main="Main" path="Export" file="Sample" />
 	<window background="#90C3D4" />
 	
-	<source path="Source" />
-	
-	<haxelib name="openfl" />
+	<source path="src" />
+    <source path="bin/jive/gen" />
 
-	<haxelib name="swf" />
-	
-	<assets path="Assets" rename="assets" />
+    <haxelib name="openfl" />
+    <haxelib name="jive"/>
 
 	<include path="../../jive-nativetools" if="mobile" />
+
 	<android target-sdk-version="21" />
 
 </project>

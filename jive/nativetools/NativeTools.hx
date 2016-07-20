@@ -64,7 +64,7 @@ class NativeTools {
 	}
 
 
-	public static function getDensity() : Float {
+	public static function getScale() : Float {
 		
 		#if (android && openfl)
 		
