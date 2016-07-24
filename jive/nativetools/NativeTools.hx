@@ -13,6 +13,23 @@ import openfl.utils.JNI;
 
 class NativeTools {
 	
+	public static var dpi(get, never): Int;
+	private static var _dpi: Int = -1;
+	private static function get_dpi() : Int {
+		if (_dpi < 0)
+			_dpi = getDPI();
+		return _dpi;
+	}
+
+
+	public static var scale(get, never): Float;
+	private static var _scale: Float = -1;
+	private static function get_scale() : Float {
+		if (_scale < 0)
+			_scale = getScale();
+		return _scale;
+	}
+
 	
 	public static function setStatusBarColor(color:Int) {
 		

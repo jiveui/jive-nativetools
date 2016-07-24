@@ -19,8 +19,8 @@ class Main extends Sprite {
 		// NativeTools.setStatusBarColor(0xFF90C3D4);
 		NativeTools.showStatusBar();
 
-		trace("DPI = " + NativeTools.getDPI());
-		trace("Scale = " + NativeTools.getScale());
+		trace("DPI = " + NativeTools.dpi);
+		trace("Scale = " + NativeTools.scale);
 	}
 
 }
