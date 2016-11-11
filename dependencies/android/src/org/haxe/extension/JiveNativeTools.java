@@ -82,14 +82,6 @@ public class JiveNativeTools extends Extension {
 	public static float getDensity() {
 		return Extension.mainActivity.getResources().getDisplayMetrics().density;
 	}
-
-
-	public static int sampleMethod (int inputValue) {
-		
-		return inputValue * 100;
-		
-	}
-	
 	
 	/**
 	 * Called when an activity you launched exits, giving you the requestCode 
